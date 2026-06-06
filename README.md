@@ -13,7 +13,7 @@ Portfólio pessoal desenvolvido para apresentar minha jornada como desenvolvedor
 
 ## 📋 Índice
 
-- [Sobre o Projeto](#sobre-o-projeto)
+- [📖 Sobre o Projeto](#sobre-o-projeto)
 - [🎨 Demonstração](#-demonstração)
 - [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
 - [📁 Estrutura do Projeto](#-estrutura-do-projeto)
@@ -89,26 +89,40 @@ Apenas um navegador web moderno (Chrome, Firefox, Edge, Safari)
 1. **Clone o repositório**
 ```bash
 git clone https://github.com/emanuelxbt/portfolio_frontend.git
+```
 Acesse a pasta
-bash
+
+```bash
 cd portfolio_frontend
-Abra o arquivo HTML
-bash
+```
+
+
+Abra o arquivo HTML:
 # Windows
+```bash
 start index.html
+```
+
 
 # macOS
+```bash
 open index.html
+```
+
 
 # Linux
+```bash
 xdg-open index.html
+```
 Ou simplesmente dê duplo clique no arquivo index.html!
 
 Com Live Server (VS Code)
 
 Se usa o VS Code, instale a extensão Live Server e clique em "Go Live" no canto inferior direito.
 
-📱 Responsividade
+---
+
+## 📱 Responsividade
 
 O portfólio se adapta perfeitamente a diferentes tamanhos de tela:
 
@@ -116,7 +130,10 @@ Dispositivo	Largura	Comportamento
 📱 Smartphone	< 768px	Layout em coluna, menu reduzido
 📟 Tablet	768px - 1024px	Layout adaptativo
 💻 Desktop	> 1024px	Layout completo com sidebar
-🎯 Próximas Melhorias
+
+---
+
+## 🎯 Próximas Melhorias
 
 Adicionar mais projetos ao portfólio
 Implementar dark mode
@@ -125,7 +142,10 @@ Adicionar seção de certificados
 Melhorar performance e SEO
 Implementar animações com JavaScript
 Adicionar blog técnico
-🌟 Funcionalidades em Destaque
+
+---
+
+## 🌟 Funcionalidades em Destaque
 
 Navbar fixa com links âncora para navegação suave
 Cards de projetos com hover effect e botão de repositório
@@ -133,7 +153,10 @@ Lista de tecnologias com ícones interativos
 Links sociais (GitHub e LinkedIn) com transição
 Imagem de perfil com efeito de zoom no hover
 Scrollbar personalizada com a cor do tema
-🤝 Contribuição
+
+---
+
+## 🤝 Contribuição
 
 Este é um projeto pessoal de portfólio. Sugestões são sempre bem-vindas!
 
@@ -143,14 +166,18 @@ Commit suas mudanças (git commit -m 'Adiciona recurso X')
 Push para a Branch (git push origin feature/melhoria)
 Abra um Pull Request
 
-📞 Contato
+---
+
+## 📞 Contato
 
 Emanuel Filipe - Belo Horizonte/MG
 📧 contato.emanuel2002@gmail.com
 🔗 LinkedIn: linkedin.com/in/emanuelxbt
 🐙 GitHub: github.com/emanuelxbt
 
-🙏 Agradecimentos
+---
+
+## 🙏 Agradecimentos
 
 SENAC - Pelo curso Técnico em Desenvolvimento de Sistemas;
 Alura e Instituto Caldeira - Pela trilha Geração Caldeira que tem me ensinado bastante e dado vida a este projeto;
