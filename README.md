@@ -88,12 +88,12 @@ Apenas um navegador web moderno (Chrome, Firefox, Edge, Safari)
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/emanuelxbt/portfolio_frontend.git
+git clone https://github.com/emanuelxbt/frontend.git
 ```
 Acesse a pasta
 
 ```bash
-cd portfolio_frontend
+cd frontend
 ```
 
 
