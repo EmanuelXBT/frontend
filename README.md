@@ -7,11 +7,11 @@
 
 Portfólio pessoal desenvolvido para apresentar minha jornada como desenvolvedor, projetos e habilidades técnicas. Um site moderno, responsivo e com design clean.
 
-🔗 **Visualizar online:** [https://emanuelxbt.github.io/portfolio_frontend](https://emanuelxbt.github.io/frontend/)
+🔗 **Visualizar online:** [https://emanuelxbt.github.io/frontend](https://emanuelxbt.github.io/frontend/)
 
 ---
 
-## 📋 Índice
+### 📋 Índice
 
 - [📖 Sobre o Projeto](#sobre-o-projeto)
 - [🎨 Demonstração](#-demonstração)
