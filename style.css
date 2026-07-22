@@ -143,20 +143,16 @@ h2:after {
 
 .marquee__logo {
     height: 36px;
-    max-width: 140px;
     width: auto;
-    background: rgba(255,255,255,0.92);
-    border-radius: 10px;
-    padding: 7px 16px;
-    box-sizing: content-box;
+    opacity: 0.92;
     transition: all 0.3s ease;
     flex-shrink: 0;
     object-fit: contain;
 }
 
 .marquee__logo:hover {
-    background: #ffffff;
-    box-shadow: 0 0 16px rgba(255,255,255,0.25);
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
     transform: scale(1.08);
 }
 
@@ -594,9 +590,7 @@ h2:after {
     }
 
     .marquee__logo {
-        height: 26px;
-        padding: 4px 10px;
-        border-radius: 7px;
+        height: 24px;
     }
     
     .apresentacao {
