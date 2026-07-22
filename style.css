@@ -159,16 +159,22 @@ h2:after {
     object-position: center;
 }
 
-/* Sydle é texto puro — altura extra para equiparar peso óptico */
+/* Sydle é texto puro — scale para equiparar peso óptico */
 img[src*="logo-sydle"] {
-    height: 44px;
-    width: auto;
+    transform: scale(1.8);
+    transform-origin: center center;
+    margin: 0 4px;
 }
 
 .marquee__logo:hover {
     opacity: 1;
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.3));
     transform: scale(1.08);
+}
+
+/* Sydle: hover composto com o scale base */
+img[src*="logo-sydle"]:hover {
+    transform: scale(1.95);
 }
 
 .marquee__divider {
