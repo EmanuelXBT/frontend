@@ -136,10 +136,17 @@ h2:after {
 .marquee__inner {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0;
     white-space: nowrap;
     animation: marqueeScroll 20s linear infinite;
     width: max-content;
+}
+
+.marquee__set {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
 }
 
 .marquee__inner a {
