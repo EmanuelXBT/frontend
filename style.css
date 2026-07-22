@@ -7,7 +7,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Compensa a altura do header fixo */
+    scroll-padding-top: 80px;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== VARIÁVEIS (tema claro/escuro adaptável) ===== */
+/* ===== VARIÁVEIS ===== */
 :root {
     --primary: #3b82f6;
     --primary-dark: #2563eb;
@@ -33,6 +33,9 @@ body {
     --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025);
     --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
     --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    --escalar: #1a365d;
+    --globo: #e74c3c;
+    --sydle: #6c5ce7;
 }
 
 /* ===== TIPOGRAFIA ===== */
@@ -99,6 +102,89 @@ h2:after {
     color: var(--primary);
     border-bottom-color: var(--primary);
     transform: translateY(-2px);
+}
+
+/* ===== MARQUEE ===== */
+.marquee__wrapper {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 0.9rem 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-bottom: 1px solid #334155;
+}
+
+.marquee__label {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    padding-left: 2rem;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.marquee__track {
+    overflow: hidden;
+    flex: 1;
+    position: relative;
+}
+
+.marquee__inner {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    white-space: nowrap;
+    animation: marqueeScroll 20s linear infinite;
+    width: max-content;
+}
+
+.marquee__item {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 1.2rem;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: var(--transition);
+}
+
+.marquee__item.escalar {
+    color: #60a5fa;
+    border-left: 3px solid #60a5fa;
+}
+
+.marquee__item.globo {
+    color: #f87171;
+    border-left: 3px solid #f87171;
+}
+
+.marquee__item.sydle {
+    color: #a78bfa;
+    border-left: 3px solid #a78bfa;
+}
+
+.marquee__divider {
+    color: #475569;
+    font-size: 1.2rem;
+    user-select: none;
+}
+
+/* Pausa no hover */
+.marquee__track:hover .marquee__inner {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* ===== SEÇÃO PRINCIPAL (SOBRE) ===== */
@@ -202,11 +288,114 @@ h2:after {
     border-color: var(--primary);
 }
 
-/* ===== SEÇÃO PROJETOS ===== */
-.projetos {
+/* ===== SEÇÃO EXPERIÊNCIA ===== */
+.experiencia {
     background: var(--bg-surface);
     padding: 4rem 2rem;
     border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.experiencia__titulo {
+    text-align: center;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.experiencia__titulo:after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+}
+
+.experiencia__container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experiencia__card {
+    background: var(--bg-card);
+    border-radius: 1.5rem;
+    padding: 2rem 2.5rem;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    border-left: 4px solid var(--escalar);
+}
+
+.experiencia__card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.experiencia__card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.experiencia__badge {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    letter-spacing: 0.03em;
+}
+
+.experiencia__badge.escalar {
+    background: #1a365d;
+    color: #93c5fd;
+}
+
+.experiencia__data {
+    font-size: 0.85rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.experiencia__card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: var(--secondary);
+}
+
+.experiencia__local {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.experiencia__lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.experiencia__lista li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.experiencia__lista li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* ===== SEÇÃO PROJETOS ===== */
+.projetos {
+    padding: 4rem 2rem;
     border-bottom: 1px solid var(--border-light);
 }
 
@@ -226,7 +415,7 @@ h2:after {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -239,6 +428,8 @@ h2:after {
     border: 1px solid rgba(59, 130, 246, 0.1);
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .projeto__card:hover {
@@ -249,12 +440,25 @@ h2:after {
 
 .projeto__card h3 {
     font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--secondary);
+    margin-bottom: 0.6rem;
     background: linear-gradient(120deg, var(--secondary), var(--primary));
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+}
+
+.projeto__tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--primary);
+    background: var(--primary-glow);
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    align-self: flex-start;
 }
 
 .projeto__card p {
@@ -281,6 +485,22 @@ h2:after {
     color: white;
     transform: translateX(6px);
     box-shadow: var(--shadow-sm);
+}
+
+/* Linha brilhante nos cards */
+.projeto__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    transition: left 0.5s ease;
+}
+
+.projeto__card:hover::before {
+    left: 100%;
 }
 
 /* ===== TECNOLOGIAS ===== */
@@ -342,7 +562,6 @@ h2:after {
     color: #cbd5e1;
     text-align: center;
     padding: 2rem;
-    margin-top: 3rem;
     border-top: 1px solid #334155;
     font-size: 0.9rem;
     letter-spacing: 0.3px;
@@ -364,6 +583,26 @@ h2:after {
     
     .cabecalho__menu__link {
         font-size: 0.9rem;
+    }
+
+    .marquee__wrapper {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 0.7rem 0;
+    }
+
+    .marquee__label {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .marquee__inner {
+        gap: 1.5rem;
+    }
+
+    .marquee__item {
+        font-size: 0.9rem;
+        padding: 0.2rem 0.8rem;
     }
     
     .apresentacao {
@@ -390,6 +629,15 @@ h2:after {
     
     .apresentacao__imagem {
         max-width: 240px;
+    }
+
+    .experiencia__card {
+        padding: 1.5rem;
+    }
+
+    .experiencia__card__header {
+        flex-direction: column;
+        align-items: flex-start;
     }
     
     .projetos {
@@ -427,6 +675,10 @@ h2:after {
     .projetos__container {
         grid-template-columns: 1fr;
     }
+
+    .experiencia__container {
+        padding: 0 0.5rem;
+    }
     
     .tecnologias__lista {
         gap: 0.8rem;
@@ -445,11 +697,11 @@ h2:after {
     }
 }
 
-.apresentacao, .projetos, .tecnologias {
+.apresentacao, .projetos, .tecnologias, .experiencia {
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Scroll personalizado (suave) */
+/* Scroll personalizado */
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -475,28 +727,7 @@ h2:after {
     border-radius: 6px;
 }
 
-/* Melhor contraste para links ativos */
+/* Link ativo */
 .cabecalho__menu__link:active {
     color: var(--primary-dark);
-}
-
-/* Efeito de brilho sutil nos cards */
-.projeto__card {
-    position: relative;
-    overflow: hidden;
-}
-
-.projeto__card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, var(--primary), transparent);
-    transition: left 0.5s ease;
-}
-
-.projeto__card:hover::before {
-    left: 100%;
 }
