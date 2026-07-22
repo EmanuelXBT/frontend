@@ -109,6 +109,7 @@ h2:after {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     padding: 0.9rem 0;
     overflow: hidden;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,21 +129,20 @@ h2:after {
 }
 
 .marquee__track {
-    overflow: hidden;
-    flex: 1;
-    position: relative;
+    display: flex;
+    width: max-content;
+    animation: marqueeScroll 20s linear infinite;
 }
 
-.marquee__inner {
+.marquee__content {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     white-space: nowrap;
-    animation: marqueeScroll 20s linear infinite;
-    width: max-content;
+    flex-shrink: 0;
 }
 
-.marquee__inner a {
+.marquee__content a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -187,7 +187,7 @@ img[src*="logo-sydle"]:hover {
 }
 
 /* Pausa no hover */
-.marquee__track:hover .marquee__inner {
+.marquee__track:hover {
     animation-play-state: paused;
 }
 
@@ -598,7 +598,7 @@ img[src*="logo-sydle"]:hover {
         font-size: 0.9rem;
     }
 
-    .marquee__inner {
+    .marquee__content {
         gap: 1.2rem;
     }
 
