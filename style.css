@@ -150,8 +150,9 @@ h2:after {
 }
 
 .marquee__logo {
-    height: 36px;
-    width: 52px;
+    height: 2.25rem;
+    width: auto;
+    max-width: 8rem;
     opacity: 0.92;
     transition: all 0.3s ease;
     flex-shrink: 0;
@@ -159,11 +160,10 @@ h2:after {
     object-position: center;
 }
 
-/* Sydle é texto puro — scale para equiparar peso óptico */
+/* Sydle é texto puro — scale para equiparar peso óptico (unitless = responsivo) */
 img[src*="logo-sydle"] {
     transform: scale(1.8);
     transform-origin: center center;
-    margin: 0 4px;
 }
 
 .marquee__logo:hover {
@@ -613,7 +613,7 @@ img[src*="logo-sydle"]:hover {
     }
 
     .marquee__logo {
-        height: 24px;
+        height: 1.5rem;
     }
     
     .apresentacao {
