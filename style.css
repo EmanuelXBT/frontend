@@ -141,6 +141,14 @@ h2:after {
     width: max-content;
 }
 
+.marquee__inner a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 0;
+}
+
 .marquee__logo {
     height: 36px;
     width: 52px;
@@ -160,7 +168,9 @@ h2:after {
 .marquee__divider {
     color: #475569;
     font-size: 1.2rem;
+    line-height: 1;
     user-select: none;
+    flex-shrink: 0;
 }
 
 /* Pausa no hover */
