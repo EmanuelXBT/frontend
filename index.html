@@ -4,22 +4,31 @@
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emanuel | Desenvolvedor Full-Stack & QA</title>
+    <title>Emanuel | Desenvolvedor Full-Stack &amp; QA</title>
+
+    <!-- Tipografia Geist (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
+    <!-- ═══════════════ HEADER / NAV ═══════════════ -->
     <header class="cabecalho">
         <nav class="cabecalho__menu">
-            <a class="cabecalho__menu__link" href="#sobre">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="#sobre">Sobre</a>
             <a class="cabecalho__menu__link" href="#experiencia">Experiência</a>
             <a class="cabecalho__menu__link" href="#projetos">Projetos</a>
-            <a class="cabecalho__menu__link" href="#tecnologias">Tecnologias</a>
+            <a class="cabecalho__menu__link" href="#tecnologias">Stack</a>
         </nav>
     </header>
 
-    <!-- MARQUEE DE EMPRESAS -->
+    <!-- ═══════════════ MARQUEE DE EMPRESAS (PRESERVADO) ═══════════════ -->
     <div class="marquee__wrapper">
         <p class="marquee__label">Onde conquistei oportunidades:</p>
         <div class="marquee__track">
@@ -53,50 +62,78 @@
         </div>
     </div>
 
-    <main class="apresentacao" id="sobre">
-        <section class="apresentacao__conteudo">
-            <h1 class="apresentacao__conteudo__titulo">
-                Emanuel — <br>
-                <strong class="titulo-destaque">Desenvolvedor Full-Stack & QA</strong>
+    <!-- ═══════════════ HERO SECTION — LAYOUT 2 COLUNAS ═══════════════ -->
+    <main class="hero" id="sobre">
+        <!-- Coluna Esquerda: Texto + CTAs -->
+        <div class="hero__content">
+            <p class="hero__greeting">Olá, eu sou</p>
+            <h1 class="hero__title">
+                Emanuel <span class="hero__title--highlight">Filipe</span>
             </h1>
-            <p class="apresentacao__conteudo__texto">
-                Comecei minha jornada no desenvolvimento em 2026 e, desde então, cada linha de código tem sido uma conquista. Atualmente sou <strong>estagiário de QA na Escalar Comunicação</strong> em Belo Horizonte, onde conquistei a vaga após vencer uma competição de 2 semanas contra desenvolvedores do 5º semestre.
+            <p class="hero__role">
+                Desenvolvedor <span class="hero__role--accent">Full-Stack</span> &amp; <span class="hero__role--accent">QA</span>
             </p>
-            <p class="apresentacao__conteudo__texto">
-                Estudante do 2º semestre de <strong>Técnico em Desenvolvimento de Sistemas (SENAC)</strong> e futuro graduando em <strong>Ciência da Computação</strong> (início em ago/2026). Meu foco é arquitetar soluções robustas no back-end com Java e Spring Boot, automatizar processos de QA com Python e Selenium, e construir integrações que fazem a diferença.
+            <p class="hero__description">
+                Da competição ao estágio em 2 semanas. Construo soluções robustas com Java e Spring Boot,
+                automatizo QA com Python e Selenium, e exploro infraestrutura self-hosted.
+                Estudante do 2º semestre no SENAC — futuro graduando em Ciência da Computação.
             </p>
-            <p class="apresentacao__conteudo__texto">
-                Na Escalar, automatizei processos de QA com scripts Python, identificando <strong>19 bugs</strong> no sistema EDS Manager em apenas duas semanas — entregando o que ninguém esperava de um estagiário do 2º período.
-            </p>
-            
-            <div class="apresentacao__links">
-                <h2 class="apresentacao__links__subtitulo">Acesse minhas redes:</h2>
-                <a class="apresentacao__links__navegacao" href="https://github.com/emanuelxbt" target="_blank" rel="noopener noreferrer">
+
+            <div class="hero__stats">
+                <div class="hero__stat">
+                    <span class="hero__stat__number">19</span>
+                    <span class="hero__stat__label">bugs encontrados<br>em 2 semanas</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat__number">5+</span>
+                    <span class="hero__stat__label">projetos<br>no GitHub</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat__number">BH</span>
+                    <span class="hero__stat__label">Belo Horizonte<br>MG, Brasil</span>
+                </div>
+            </div>
+
+            <div class="hero__actions">
+                <a href="#projetos" class="hero__btn hero__btn--primary">
+                    Ver Projetos
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                <a href="https://github.com/emanuelxbt" target="_blank" rel="noopener noreferrer" class="hero__btn hero__btn--secondary">
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
-                <a class="apresentacao__links__navegacao" href="https://linkedin.com/in/emanuelxbt/" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com/in/emanuelxbt/" target="_blank" rel="noopener noreferrer" class="hero__btn hero__btn--secondary">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn
                 </a>
             </div>
-        </section>
-        
-        <img class="apresentacao__imagem" src="open_to_work.jpeg" alt="Foto de perfil de Emanuel — Desenvolvedor Full-Stack & QA">
+        </div>
+
+        <!-- Coluna Direita: Imagem com elementos geométricos -->
+        <div class="hero__visual">
+            <div class="hero__visual__container">
+                <img class="hero__image" src="open_to_work.jpeg" alt="Emanuel — Desenvolvedor Full-Stack &amp; QA">
+                <div class="hero__orb hero__orb--1"></div>
+                <div class="hero__orb hero__orb--2"></div>
+                <div class="hero__accent__dot hero__accent__dot--tl"></div>
+                <div class="hero__accent__dot hero__accent__dot--br"></div>
+            </div>
+        </div>
     </main>
 
-    <!-- SEÇÃO EXPERIÊNCIA -->
+    <!-- ═══════════════ SEÇÃO EXPERIÊNCIA ═══════════════ -->
     <section class="experiencia" id="experiencia">
-        <h2 class="experiencia__titulo">Experiência Profissional</h2>
+        <h2 class="section__title">Experiência</h2>
         <div class="experiencia__container">
             <div class="experiencia__card">
                 <div class="experiencia__card__header">
-                    <span class="experiencia__badge escalar">Escalar Comunicação</span>
+                    <span class="experiencia__badge">Escalar Comunicação</span>
                     <span class="experiencia__data">Jun 2026 — Atual</span>
                 </div>
                 <h3>Estágio Técnico em QA</h3>
                 <p class="experiencia__local"><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</p>
                 <ul class="experiencia__lista">
                     <li>Automatização de testes com <strong>Python + Selenium</strong> e <strong>Playwright + Pytest</strong></li>
-                    <li>Identificação de 19 bugs no EDS Manager em 2 semanas</li>
+                    <li>Identificação de <strong>19 bugs</strong> no EDS Manager em 2 semanas</li>
                     <li>Criação de scripts de validação para plataformas de digital signage</li>
                     <li>Vaga conquistada via competição contra desenvolvedores do 5º semestre</li>
                 </ul>
@@ -104,63 +141,177 @@
         </div>
     </section>
 
-    <!-- SEÇÃO PROJETOS -->
+    <!-- ═══════════════ SEÇÃO PROJETOS — BENTO GRID ═══════════════ -->
     <section class="projetos" id="projetos">
-        <h2 class="projetos__titulo">Meus Projetos</h2>
-        <div class="projetos__container">
-            
-            <div class="projeto__card">
-                <h3>Pynkaro</h3>
-                <span class="projeto__tag">Python</span>
-                <p>Assistente Pynkaro das Galáxias — um bot inteligente com personalidade única, desenvolvido em Python para interagir e auxiliar em diversas tarefas automatizadas com estilo e humor.</p>
-                <a href="https://github.com/EmanuelXBT/Pynkaro" target="_blank" class="projeto__link">Ver Repositório</a>
+        <h2 class="section__title">Projetos</h2>
+
+        <div class="bento">
+            <!-- Card Destaque (2 colunas) — QA Autopilot -->
+            <div class="bento__card bento__card--featured">
+                <div class="bento__card__badge">
+                    <i class="fa-solid fa-star"></i> Projeto Destaque
+                </div>
+                <div class="bento__card__content">
+                    <h3>QA Autopilot (QAwler)</h3>
+                    <div class="bento__tags">
+                        <span class="bento__tag">Java 17</span>
+                        <span class="bento__tag">Spring Boot</span>
+                        <span class="bento__tag">MySQL</span>
+                        <span class="bento__tag">Selenium</span>
+                        <span class="bento__tag">RabbitMQ</span>
+                        <span class="bento__tag">Docker</span>
+                    </div>
+                    <p>SaaS de QA automatizado — crawler web que detecta bugs HTTP, JS e de renderização com screenshots. Arquitetura baseada em filas com RabbitMQ, persistência em MySQL e containerização completa. Projeto Integrador do SENAC 2026.</p>
+                    <a href="https://github.com/EmanuelXBT/Projeto-Integrador01-SENAC" target="_blank" rel="noopener noreferrer" class="bento__link">
+                        Ver repositório <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+                <div class="bento__card__bg"></div>
             </div>
 
-            <div class="projeto__card">
-                <h3>QA Autopilot (QAwler)</h3>
-                <span class="projeto__tag">Java • Spring Boot</span>
-                <p>SaaS de QA automatizado — crawler web que detecta bugs HTTP, JS e de renderização com screenshots. Stack: Java 17, Spring Boot, MySQL, Selenium, RabbitMQ e Docker. Projeto Integrador do SENAC.</p>
-                <a href="https://github.com/EmanuelXBT/Projeto-Integrador01-SENAC" target="_blank" class="projeto__link">Ver Repositório</a>
+            <!-- Card 2 — Pynkaro -->
+            <div class="bento__card">
+                <div class="bento__card__content">
+                    <div class="bento__card__icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3>Pynkaro</h3>
+                    <div class="bento__tags">
+                        <span class="bento__tag">Python</span>
+                    </div>
+                    <p>Assistente Pynkaro das Galáxias — bot inteligente com personalidade única, desenvolvido em Python para interagir e auxiliar em diversas tarefas automatizadas.</p>
+                    <a href="https://github.com/EmanuelXBT/Pynkaro" target="_blank" rel="noopener noreferrer" class="bento__link">
+                        Ver repositório <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="projeto__card">
-                <h3>Hermes Agent — AI Autônoma</h3>
-                <span class="projeto__tag">UmbrelOS • Docker • LLM</span>
-                <p>Assistente de IA autônomo auto-hospedado em servidor pessoal (Umbrel OS). Integração com Telegram via BotFather, usando OpenRouter para acesso a múltiplos LLMs. Prompt Engineering avançado com memória persistente.</p>
-                <a href="https://github.com/EmanuelXBT/hermes-agent-umbrel" target="_blank" class="projeto__link">Ver Repositório</a>
+            <!-- Card 3 — Hermes Agent -->
+            <div class="bento__card">
+                <div class="bento__card__content">
+                    <div class="bento__card__icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3>Hermes Agent</h3>
+                    <div class="bento__tags">
+                        <span class="bento__tag">UmbrelOS</span>
+                        <span class="bento__tag">Docker</span>
+                        <span class="bento__tag">LLM</span>
+                    </div>
+                    <p>Assistente de IA autônomo auto-hospedado em servidor pessoal. Integração com Telegram, múltiplos provedores LLM e Prompt Engineering avançado.</p>
+                    <a href="https://github.com/EmanuelXBT/hermes-agent-umbrel" target="_blank" rel="noopener noreferrer" class="bento__link">
+                        Ver repositório <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="projeto__card">
-                <h3>Whatsmiau</h3>
-                <span class="projeto__tag">Node.js • Baileys</span>
-                <p>Bot para WhatsApp usando a biblioteca Baileys — automação de mensagens e integração com serviços externos no ecossistema de mensageria.</p>
-                <a href="https://github.com/EmanuelXBT/whatsmiau" target="_blank" class="projeto__link">Ver Repositório</a>
+            <!-- Card 4 — Whatsmiau -->
+            <div class="bento__card">
+                <div class="bento__card__content">
+                    <div class="bento__card__icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h3>Whatsmiau</h3>
+                    <div class="bento__tags">
+                        <span class="bento__tag">Node.js</span>
+                        <span class="bento__tag">Baileys</span>
+                    </div>
+                    <p>Bot para WhatsApp usando a biblioteca Baileys — automação de mensagens e integração com serviços externos.</p>
+                    <a href="https://github.com/EmanuelXBT/whatsmiau" target="_blank" rel="noopener noreferrer" class="bento__link">
+                        Ver repositório <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
             </div>
 
+            <!-- Card 5 — Infraestrutura & Self-Hosting -->
+            <div class="bento__card bento__card--glass">
+                <div class="bento__card__content">
+                    <div class="bento__card__icon">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3>Infra & Self-Hosting</h3>
+                    <div class="bento__tags">
+                        <span class="bento__tag">Umbrel</span>
+                        <span class="bento__tag">Docker</span>
+                        <span class="bento__tag">Linux</span>
+                        <span class="bento__tag">BTC Node</span>
+                    </div>
+                    <p>Explorando infraestrutura auto-hospedada: servidor pessoal com Umbrel OS, nodes de Bitcoin, e containers Docker para serviços em produção.</p>
+                    <span class="bento__status">Em documentação</span>
+                </div>
+            </div>
+
+            <!-- Card 6 — Beyondapp (Java architecture) -->
+            <div class="bento__card bento__card--outline">
+                <div class="bento__card__content">
+                    <div class="bento__card__icon">
+                        <i class="fa-solid fa-cubes"></i>
+                    </div>
+                    <h3>Beyondapp</h3>
+                    <div class="bento__tags">
+                        <span class="bento__tag">Java</span>
+                        <span class="bento__tag">Spring Boot</span>
+                        <span class="bento__tag">Microservices</span>
+                    </div>
+                    <p>Projeto arquitetural em andamento — sistema distribuído com microserviços Java, mensageria assíncrona e deploy containerizado.</p>
+                    <span class="bento__status">Em breve</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- SEÇÃO TECNOLOGIAS -->
+    <!-- ═══════════════ SEÇÃO TECNOLOGIAS — BADGES CATEGORIZADOS ═══════════════ -->
     <section class="tecnologias" id="tecnologias">
-        <h2 class="tecnologias__titulo">Tecnologias e Ferramentas</h2>
-        <ul class="tecnologias__lista">
-            <li><i class="fa-brands fa-java"></i> Java + Spring Boot</li>
-            <li><i class="fa-brands fa-python"></i> Python</li>
-            <li><i class="fa-solid fa-database"></i> SQL / MySQL</li>
-            <li><i class="fa-brands fa-docker"></i> Docker</li>
-            <li><i class="fa-solid fa-server"></i> Linux</li>
-            <li><i class="fa-brands fa-git-alt"></i> Git / GitHub</li>
-            <li><i class="fa-solid fa-vial"></i> Selenium</li>
-            <li><i class="fa-solid fa-robot"></i> Playwright</li>
-            <li><i class="fa-solid fa-envelope"></i> RabbitMQ</li>
-            <li><i class="fa-solid fa-code"></i> HTML5 / CSS3</li>
-            <li><i class="fa-brands fa-js"></i> JavaScript</li>
-            <li><i class="fa-solid fa-brain"></i> Prompt Engineering</li>
-        </ul>
+        <h2 class="section__title">Stack &amp; Ferramentas</h2>
+
+        <div class="tech__categories">
+            <div class="tech__category">
+                <h3 class="tech__category__title">
+                    <i class="fa-solid fa-layer-group"></i> Backend
+                </h3>
+                <div class="tech__badges">
+                    <span class="tech__badge"><i class="fa-brands fa-java"></i> Java</span>
+                    <span class="tech__badge"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+                    <span class="tech__badge"><i class="fa-brands fa-python"></i> Python</span>
+                    <span class="tech__badge"><i class="fa-solid fa-database"></i> SQL / MySQL</span>
+                    <span class="tech__badge"><i class="fa-brands fa-node"></i> Node.js</span>
+                </div>
+            </div>
+
+            <div class="tech__category">
+                <h3 class="tech__category__title">
+                    <i class="fa-solid fa-palette"></i> Frontend
+                </h3>
+                <div class="tech__badges">
+                    <span class="tech__badge"><i class="fa-solid fa-code"></i> HTML5</span>
+                    <span class="tech__badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                    <span class="tech__badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                </div>
+            </div>
+
+            <div class="tech__category">
+                <h3 class="tech__category__title">
+                    <i class="fa-solid fa-shield-halved"></i> Infra &amp; QA
+                </h3>
+                <div class="tech__badges">
+                    <span class="tech__badge"><i class="fa-brands fa-docker"></i> Docker</span>
+                    <span class="tech__badge"><i class="fa-solid fa-server"></i> Linux</span>
+                    <span class="tech__badge"><i class="fa-brands fa-git-alt"></i> Git / GitHub</span>
+                    <span class="tech__badge"><i class="fa-solid fa-vial"></i> Selenium</span>
+                    <span class="tech__badge"><i class="fa-brands fa-playstation"></i> Playwright</span>
+                    <span class="tech__badge"><i class="fa-solid fa-envelope"></i> RabbitMQ</span>
+                    <span class="tech__badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Prompt Engineering</span>
+                    <span class="tech__badge"><i class="fa-solid fa-network-wired"></i> UmbrelOS</span>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- ═══════════════ FOOTER ═══════════════ -->
     <footer class="rodape">
         <p>Desenvolvido por Emanuel &copy; 2026 — Belo Horizonte, MG</p>
+        <p class="rodape__tagline">Full-Stack Developer &amp; QA Engineer</p>
     </footer>
+
 </body>
 </html>
