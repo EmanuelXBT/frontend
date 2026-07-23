@@ -28,11 +28,12 @@
         </nav>
     </header>
 
-    <!-- ═══════════════ MARQUEE DE EMPRESAS (PRESERVADO) ═══════════════ -->
+    <!-- ═══════════════ MARQUEE DE EMPRESAS — Infinite Scroll ═══════════════ -->
     <div class="marquee__wrapper">
-        <p class="marquee__label">Onde conquistei oportunidades:</p>
+        <p class="marquee__label">Onde conquistei oportunidades</p>
         <div class="marquee__track">
-            <div class="marquee__inner">
+            <!-- Grupo 1 -->
+            <div class="marquee__content">
                 <a href="https://escalarcomunicacao.com.br/" target="_blank" rel="noopener noreferrer" title="Escalar Comunicação">
                     <img class="marquee__logo" src="assets/logo-escalar.svg" alt="Escalar Comunicação">
                 </a>
@@ -45,7 +46,9 @@
                     <img class="marquee__logo" src="assets/logo-sydle.svg" alt="Sydle">
                 </a>
                 <span class="marquee__divider">•</span>
-                <!-- duplicados para loop infinito sem gap -->
+            </div>
+            <!-- Grupo 2 (cópia exata para loop seamless) -->
+            <div class="marquee__content" aria-hidden="true">
                 <a href="https://escalarcomunicacao.com.br/" target="_blank" rel="noopener noreferrer" title="Escalar Comunicação">
                     <img class="marquee__logo" src="assets/logo-escalar.svg" alt="Escalar Comunicação">
                 </a>

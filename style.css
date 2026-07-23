@@ -173,46 +173,49 @@ strong {
 }
 
 /* ================================================================
-   MARQUEE — Mecânica preservada · Visual alinhado ao Dark Mode
+   MARQUEE — Two-Group Infinite Scroll (Right-to-Left)
+   Mecânica robusta: animação na track, dois grupos independentes
    ================================================================ */
 .marquee__wrapper {
-    background: linear-gradient(135deg, #0d0d10 0%, #111114 50%, #0d0d10 100%);
-    padding: 1.1rem 0;
+    background: linear-gradient(135deg, #0d0d10 0%, #141418 50%, #0d0d10 100%);
+    padding: 1.3rem 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
     border-bottom: 1px solid var(--border-subtle);
 }
 
 .marquee__label {
-    color: var(--text-muted);
-    font-size: 0.75rem;
+    color: var(--accent-soft);
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.22em;
     text-align: center;
-    font-weight: 600;
+    font-weight: 700;
     flex-shrink: 0;
+    opacity: 0.85;
 }
 
+/* TRACK é o elemento animado — flex row, width: max-content */
 .marquee__track {
-    overflow: hidden;
-    flex: 1;
-    position: relative;
+    display: flex;
+    width: max-content;
+    animation: marqueeScroll 22s linear infinite;
 }
 
-.marquee__inner {
+/* Cada CONTENT group é um flex row independente — NÃO animar */
+.marquee__content {
     display: flex;
     align-items: center;
     gap: 1.5rem;
     white-space: nowrap;
-    animation: marqueeScroll 20s linear infinite;
-    width: max-content;
+    flex-shrink: 0;
 }
 
-.marquee__inner a {
+.marquee__content a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -255,7 +258,8 @@ img[src*="logo-sydle"]:hover {
     flex-shrink: 0;
 }
 
-.marquee__track:hover .marquee__inner {
+/* Pause on hover — na track */
+.marquee__track:hover {
     animation-play-state: paused;
 }
 
@@ -962,8 +966,8 @@ img[src*="logo-sydle"]:hover {
         font-size: 0.85rem;
     }
 
-    /* Marquee mobile (preservado) */
-    .marquee__inner {
+    /* Marquee mobile */
+    .marquee__content {
         gap: 1.2rem;
     }
 
@@ -1150,7 +1154,7 @@ img[src*="logo-sydle"]:hover {
         transition-duration: 0.01ms !important;
     }
 
-    .marquee__inner {
+    .marquee__track {
         animation: none !important;
     }
 }
