@@ -838,10 +838,17 @@ img[src*="logo-sydle"]:hover {
     transition: all var(--transition-fast);
 }
 
-.tech__badge i {
+.tech__badge i,
+.tech__badge-icon {
     font-size: 0.9rem;
     color: var(--accent-soft);
     transition: color var(--transition-fast);
+}
+
+.tech__badge-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    flex-shrink: 0;
 }
 
 .tech__badge:hover {
@@ -851,7 +858,8 @@ img[src*="logo-sydle"]:hover {
     transform: translateY(-1px);
 }
 
-.tech__badge:hover i {
+.tech__badge:hover i,
+.tech__badge:hover .tech__badge-icon {
     color: var(--accent);
 }
 
