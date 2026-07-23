@@ -173,27 +173,27 @@ strong {
 }
 
 /* ================================================================
-   MARQUEE — PRESERVADO (CSS original mantido INTACTO)
+   MARQUEE — Mecânica preservada · Visual alinhado ao Dark Mode
    ================================================================ */
 .marquee__wrapper {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    padding: 0.9rem 0;
+    background: linear-gradient(135deg, #0d0d10 0%, #111114 50%, #0d0d10 100%);
+    padding: 1.1rem 0;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    border-bottom: 1px solid #334155;
+    border-bottom: 1px solid var(--border-subtle);
 }
 
 .marquee__label {
-    color: #94a3b8;
-    font-size: 0.8rem;
+    color: var(--text-muted);
+    font-size: 0.75rem;
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.18em;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     flex-shrink: 0;
 }
 
@@ -248,7 +248,7 @@ img[src*="logo-sydle"]:hover {
 }
 
 .marquee__divider {
-    color: #475569;
+    color: #3f3f46;
     font-size: 1.2rem;
     line-height: 1;
     user-select: none;
